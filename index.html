@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>airbnb clone</title>
+    <link rel="stylesheet" href="style.css ">
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="start">
+            <button>Learn more about Icons</button>
+        </div>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="images/Airbnb.png" alt="" width="102px">
+            </div>
+            <div class="stays">
+                <ul>
+                    <li>Stays</li>
+                    <li>Experiences</li>
+                    <div class="lo">
+                    <li>Online Experiences</li>
+                    </div>
+                </ul>
+            </div>
+            <div class="home">
+                <p>Airbnb you home</p>
+                <div class="location">
+                <img src="/images/location.svg" alt="" width="15.5px" height="15.5">
+            </div>
+              <button> 
+                <div class="menu-btn">
+                
+     <img src="/images/menu.svg" alt="" width="16px" height="16px">
+    <img src="/images/contact.svg" alt="" width="32px" height="32px">
+    </div>
+</button>               
+</div>           
+
+<br>
+    <div class="search-btn">
+        <div class="search-res">
+            <div class="where">
+                <h2>Where to?</h2>
+                <span>Anywhere . Any week . Add guests</span>
+            </div>
+        </div>
+       <button>
+        <ul>
+            <li>
+                <div class="ram">
+                    <span>where</span>
+                    <p>Search destination</p>
+                </div>
+            </li>
+            <li>
+            <div class="lak">
+                <span>Check in</span>
+                <p>Add date</p>
+            </div>
+        </li>
+        <li>
+                <div class="rav">
+                    <span>check out</span>
+                    <p>Add dates</p>
+                </div>
+                </li>
+                <li>
+                    <div class="see">
+                        <span>Who</span>
+                        <p>Add guests</p>
+                    </div>
+                </li>
+       
+        <div class="search-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="display:block;fill:none;height:16px;width:16px;stroke:currentColor;stroke-width:4;overflow:visible" aria-hidden="true" role="presentation" focusable="false"><path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"/></svg>
+            
+        </div>
+         </ul>
+       </button>
+    </div>
+
+            </div>
+    </header>
+    <div class="shover">
+        <div class="scroll">
+        <div class="icon">
+ <img src="https://a0.muscache.com/im/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png" alt="" height="24px">
+ <p>Icons</p>
+</div>
+<div class="icon">
+    <img src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="" height="24px">
+    <p>Amazing pools</p>
+</div>
+<div class="icon">
+    <img src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt="" height="24px">
+    <p>Beachfront</p>
+</div>
+<div class="icon">
+    <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" alt="" height="24px">
+    <p>Farms</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="" height="24px">
+    <p>Cabins</p>
+</div>
+<div class="icon">
+    <img src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg" alt="" height="24px">
+    <p>Countryside</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg" alt="" height="24px">
+<p>Amazing views</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg" alt="" height="24px">
+<p>OMG!</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt="" width="24px">
+<p>Treehouse</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/1b6a8b70-a3b6-48b5-88e1-2243d9172c06.jpg" alt="" height="24px">
+<p>Castle</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/248f85bf-e35e-4dc3-a9a1-e1dbff9a3db4.jpg" alt="" height="24px">
+<p>Top of the world</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" alt="" height="24px">
+<p>Luxe</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg" alt="" height="24px">
+<p>Top cities</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="" height="24px">
+<p>Lakefront</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/50861fca-582c-4bcc-89d3-857fb7ca6528.jpg" alt="" height="24px">
+<p>Design</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/687a8682-68b3-4f21-8d71-3c3aef6c1110.jpg" alt="" height="24px">
+<p>Boats</p>
+</div>
+<!-- <div class="icon"> -->
+<!-- <img src="https://a0.mache.com/pictures/5ed8f7c7-2e1f-a39-4edfc81a3325.jpg" alt="" height="24px"> -->
+<!-- <p>Bed & breakfasts</p> -->
+<!-- </div> -->
+
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/757deeaa-c78f-488f-992b-d3b1ecc06fc9.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/89faf9ae-bbbc-4bc4-aecd-cc15bf36cbca.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/9a2ca4df-ee90-4063-b15d-0de7e4ce210a.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/60ff02ae-d4a2-4d18-a120-0dd274a95925.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/d7445031-62c4-46d0-91c3-4f29f9790f7a.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/4221e293-4770-4ea8-a4fa-9972158d4004.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/33dd714a-7b4a-4654-aaf0-f58ea887a688.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/f0c5ca0f-5aa0-4fe5-b38d-654264bacddf.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/c8bba3ed-34c0-464a-8e6e-27574d20e4d2.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/e22b0816-f0f3-42a0-a5db-e0f1fa93292b.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/e22b0816-f0f3-42a0-a5db-e0f1fa93292b.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/7ff6e4a1-51b4-4671-bc9a-6f523f196c61.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/8a43b8c6-7eb4-421c-b3a9-1bd9fcb26622.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/8a43b8c6-7eb4-421c-b3a9-1bd9fcb26622.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+<div class="icon">
+<img src="https://a0.muscache.com/pictures/827c5623-d182-474a-823c-db3894490896.jpg" alt="" height="24px">
+<p>Bed & breakfasts</p>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+<div class="button">
+    <button>
+    <img src="arrow.svg" alt="" width="12px" height="12px">
+</button>
+</div>
+
+    </div>
+
+
+ <div class="fullface">
+            <div class="img1">
+                <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE0ODQ2MDI1NTE4MDMzOTQ4MQ%3D%3D/original/c92634d0-4964-439a-905d-b9129af14d34.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+       <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Design your INcredibles Supersuit</h1>
+        <h2>Hosted by Edna Mode</h2>
+        <div class="rupee">
+            <i class="fa-solid fa-indian-rupee-sign"></i>3,180 
+
+            <span> per guest</span>
+        </div>
+        
+        </div>
+        <div class="img1">
+            <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/bd73f0f8-9057-4bbc-ad70-1db13eb5c03f.png?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+          <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Wake up in the Musee d orsay</h1>
+        <h2>Hosted by Mathieu Lehanneur</h2>
+        <div class="rupee">
+<i class="fa-solid fa-indian-rupee-sign"></i> 0
+        <span>per guest</span>
+        </div>
+        </div>
+        <div class="img1">
+            <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Crash at the X-mansion</h1>
+        <h2>Hosted by Edna Mode</h2>
+        <div class="rupee">
+            <i class="fa-solid fa-indian-rupee-sign"></i>1,199
+        <span>per guest</span>
+        </div>
+    </div>
+            <div class="img1">
+                <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/d62c78db-3c98-46e7-8566-d685d5c689f3.png?im_w=1440&im_q=highq"alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Make core memories with inside Out 2</h1>
+        <h2>Hosted by Joy</h2>
+        <span>Coming June</span>
+     </div>
+       <div class="img1">
+        <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/4f7a276e-9995-4b32-bda6-300de0619b25.png?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+       <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Stay in prince's Purple Rain house</h1>
+        <h2>Hosted by Wendy and Lisa</h2>
+        <span>Coming August</span>
+        </div>
+
+            <div class="img1">
+                <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/cda19e4c-ae11-47b1-831b-a29f94ab76dc.png?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+       <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Go VIP with Kevin Hart</h1>
+        <h2>Hosted by kevin Hart</h2>
+        <span>Coming August</span>
+        </div>
+        <div class="img1">
+            <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjMyMzc5Mzc2MTc3OTEzMg%3D%3D/original/01819c16-43a1-4aee-9957-9edce6eb8e16.png?im_w=1440&im_q=highq"alt="" width="315.547" height="300">
+         <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Join a living room session with Doja</h1>
+        <h2>Hosted by Doja cat</h2>
+        <span>Coming October</span>
+        </div>
+        <div class="img1">
+            <div class="svg">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NjI3OTI1MjIxNDQyOA%3D%3D/original/bc989f2d-eca8-4bcf-a9b0-b70b8e685a64.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+      <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+            </div>    
+            <h1>Live like Bollywood stars Janhvil kapoor</h1>
+        <h2>Hosted by Janhvi kapoor</h2>
+        <span>Sold out</span>
+        </div>
+            <div class="img1">
+                <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjIzMTk3NDU3MjE4Nzg2NA%3D%3D/original/f4cbe542-3ce0-4c6f-a8f1-d2120c1b2420.jpeg?im_w=1440&im_q=highq"alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>  
+          <h1>Train at the X-Mansion</h1>
+        <h2>Hosted by Jubilee</h2>
+        <span>Sold out</span>
+     </div>
+       <div class="img1">
+        <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjI0NzUwMDUwMTg2Mzg5MA%3D%3D/original/99417998-fa44-4c75-ae77-287c1468977b.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Go on tour with feid</h1>
+        <h2>Hosted by feid</h2>
+        <span>Sold out</span>
+        </div>
+   
+    <div class="img1">
+        <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA3NzgxMzcwNzcxOTUzNQ%3D%3D/original/872f434b-9348-4ff1-8c6f-754fdbab4010.jpeg?im_w=1440&im_q=highq"alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Game with Khaby Lame</h1>
+        <h2>Hosted by Khaby Lame</h2>
+        <span>Sold out</span>
+     </div>
+       <div class="img1">
+        <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjE4NTg5MzIzNjI0NjI2MA%3D%3D/original/e6b26733-2c15-47d9-b097-6968b39bb697.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Drift off in the Up house</h1>
+        <h2>Hosted by Carl Fredricksen</h2>
+        <span>Sold out</span>
+        </div>
+        </div>
+
+
+        <div class="experiences">
+            <h1>Past experiences</h1>
+        </div>
+            <div class="past-exp">
+            
+            <div class="img1">
+                <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyMzIwMTE1Njc3Njg0MTIzOQ%3D%3D/original/fb9dcb8d-7fa5-402f-91ae-fa2a26e9f097.png?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+         <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Spend the night in the Ferrari Museum</h1>
+        <h2>Hosted by Marc Gene</h2>
+        <span>Sold out</span>
+        </div>
+        <div class="img1">
+            <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/b16970cf-1d55-4edd-bb1f-e1735d0a228e.jpeg?im_w=1440&im_q=highq"alt="" width="315.547" height="300">
+         <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Sherk's Swamp</h1>
+        <h2>Hosted by Donkey</h2>
+        <span>Coming October</span>
+        </div>
+        <div class="img1">
+            <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-857387972692815761/original/d106e0ef-f825-4ff8-baf7-86256a54fbd5.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+       </div>
+            <h1>Barbie's Malibu DreamHouse,Ken's Way</h1>
+        <h2>Hosted by Ken</h2>
+        <span>Sold out</span>
+        </div>
+            <div class="img1">
+                <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-694055224756906854/original/76f85a0c-b3e2-4f1d-9aa9-d7838f2393c6.jpeg?im_w=1440&im_q=highq"alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Ted Lasso's Favorite Pub</h1>
+        <h2>Hosted by Mae</h2>
+        <span>Sold out</span>
+     </div>
+       <div class="img1">
+        <div class="svg">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-782615921189136934/original/c67f78f1-5807-449a-9a88-753b7fa62d6a.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+        <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+        </div>
+            <h1>Houseplant Retreat</h1>
+        <h2>Hosted by Seth Rogen</h2>
+        <span>Sold out</span>
+        </div>
+
+      <div class="img1">
+        <div class="svg">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-53274539/original/365299e3-f926-47ee-bcbf-606d6a0370b9.jpeg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+     <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+    </div>
+        <h1>Home Alone Holiday</h1>
+     <h2>Hosted by Buzz</h2>
+     <span>Sold out</span>
+    </div>
+     <div class="img1">
+        <div class="svg">
+      <img src="https://a0.muscache.com/im/pictures/be0957a9-da56-47d6-89ca-223b6e75321a.jpg?im_w=1440&im_q=highq" alt="" width="315.547" height="300">
+ <button>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 14px; width: 14px; stroke: currentcolor; stroke-width: 3.42857; overflow: visible;"><path d="m27 18v9c0 1.1046-.8954 2-2 2h-18c-1.10457 0-2-.8954-2-2v-9m11-15v21m-10-11 9.2929-9.29289c.3905-.39053 1.0237-.39053 1.4142 0l9.2929 9.29289" fill="none"></path></svg>
+       </button>
+</div>
+
+      <h1>The last Blockbuster</h1>
+<h2>Hosted by Sandi</h2>
+<span>Sold out</span>
+    </div>
+</div>
+<div class="footer">
+<div class="footer-top">
+    <h2>Inspiration for future geteways</h2>
+</div>
+<div class="footer-flex">
+    <h3>popular</h3>
+    <h3>Arts&culture</h3>
+    <h3>Outdoors</h3>
+  <h3>Mountains</h3>
+    <h3>Beach</h3>
+    <div class="unique">
+    <h3>Unique stays</h3>
+    <h3>Categories</h3>
+       <h3>Things to do</h3>
+</div>
+</div>
+<div class="footer-grid">
+    <div class="footer-section1">
+        <ul>
+            <span>Canmore</span>
+        <p>Holiday rentals</p>
+    </ul>
+
+    <ul>
+        <span>TUcson</span>
+        <p>Apartment rentals</p>
+    </ul>
+    <ul>
+        <span>Anaheim</span>
+        <p>House rentals</p>
+    </ul>
+</div>
+    <div class="footer-section2">
+        <ul>
+        <span>Benalmadena</span>
+        <p>Holiday rentals</p>
+    </ul>
+<ul>
+        <span>Jasper</span>
+        <p>cabin rentals</p>
+    </ul>
+<ul>
+        <span>Monterey</span>
+        <p>Flat rentals</p>
+    </ul>
+
+</div>
+<div class="footer-section3">
+    <ul>
+        <span>Marbells</span>
+        <p>House rentals</p>
+    </ul>
+<ul>
+        <span>Mountain view</span>
+        <p> Cabin rentals</p>
+    </ul>
+<ul>
+        <span>Paso Robels</span>
+        <p>Cottage rentals</p>
+    </ul>
+</div>
+<div class="footer-section4">
+<ul>
+        <span>Mijas</span>
+        <p>Holiday rentals</p>
+    </ul>
+<ul>
+        <span>Devonport</span>
+        <p>Holiday rentals</p>
+    </ul>
+<ul>
+        <span>Santa Barbara</span>
+        <p>Flat rentals</p>
+    </ul>
+</div>
+<div class="footer-section5">
+<ul>
+        <span>Prescott</span>
+        <p>Holiday rentals</p>
+    </ul>
+<ul>
+        <span>Mallacoota</span>
+        <p>Pet-friendly rentals</p>
+    </ul>
+<ul>
+        <span>Sonoma</span>
+        <p>Beach house rentals</p>
+    </ul>
+
+    </div>
+    <div class="footer-section6">
+       <ul>
+        <span>Scottsdale</span>
+        <p>Mansion rentals</p>
+    </ul>
+<ul>
+        <span>Ibiza</span>
+        <p>Holiday rentals</p>
+    </ul>
+
+    <div class="show">Show more
+        <img src="" alt="">
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="footer-down">
+    
+    <div class="zoo">
+    <span>Support</span>
+        <p>Help Center</p>
+        <p>AirCover</p>
+        <p>Anti-discrimination</p>
+    <p>Disability support</p>
+<p>Cancellation option</p>
+<p>Report neighbourhood concern</p>
+</div>
+<div class="simba">
+<span>Hosting</span>
+        <p>Airbn you home</p>
+        <p>AirCover for Hosts</p>
+        <p>Hosting resources</p>
+    <p>Community forum</p>
+<p>Hosting responsibily</p>
+<p>Join a free Hosting class</p>
+</div>
+<div class="bodo">
+<span>Airbnb</span>
+        <p>Newsroom</p>
+        <p>New features</p>
+        <p>Careers</p>
+    <p>Investors</p>
+<p>Airbnb.org emergency stay</p>
+</div>
+</div>
+<div class="tham">
+<ul>&copy; 2024 Airbnb,Inc.
+    <li>privacy</li>
+    <li>Term</li>
+    <li>Sitemap</li>
+    <li> Company details</li>
+</ul>
+
+<div class="done">
+    <img src="/location.svg" alt="" width="15.5px" height="15.5px"><p>English(IN)</p>
+
+    <div class="eng">  
+<i class="fa-solid fa-indian-rupee-sign"></i>
+<p>INR</p>
+    </div>
+    <div class="dham">
+        <img src="face.svg" alt="" width="18px" height="18px">
+        <img src="twit.svg" alt="" width="18px" height="18px">
+        <img src="insta.svg" alt="" width="18px" height="18px">
+    </div>
+</div>
+</div>    
+
+         
+</body>
+</html>
